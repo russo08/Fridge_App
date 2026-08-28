@@ -1,0 +1,31 @@
+ {% extends 'base.html' %}
+
+ {% block head %}
+ <title>Fridge Contents</title>
+ {% endblock %}
+
+ {% block body %}
+ <div class="contet">
+    <h2>Fridge App</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Count</th>
+            <th>Bought</th>
+            <th>Opened</th>
+            <th>Expires in:</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>count</td>
+            <td>date</td>
+            <td>date</td>
+            <td>days</td>
+            <td>shelf</td>
+        </tr>    
+    </table>
+ </div>
+ {% endblock %}
+
+
