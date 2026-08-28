@@ -7,6 +7,7 @@
  {% block body %}
  <div class="contet">
     <h2>Fridge App</h2>
+    <button class="addbtn">Add Item</button>
     <table>
         <tr>
             <th>Item</th>
@@ -15,6 +16,7 @@
             <th>Opened</th>
             <th>Expires in:</th>
             <th>Location</th>
+            <th>Edit</th>
         </tr>
         <tr>
             <td>name</td>
@@ -23,6 +25,10 @@
             <td>date</td>
             <td>days</td>
             <td>shelf</td>
+            <td>
+                <button class="editbtn">Edit</button>
+                <button class="deletebtn">Delete</button>
+            </td>
         </tr>    
     </table>
  </div>
