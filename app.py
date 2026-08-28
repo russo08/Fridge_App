@@ -7,8 +7,8 @@ def index():
     return render_template("display_list.html")
 
 @app.route('/hello')
-def hello():
-    return 'Hello, World'
+def add_Item():
+    return render_template("add_item.html")
 
 if __name__ in "__main__":
     app.run(debug=True)

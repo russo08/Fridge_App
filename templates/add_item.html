@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+ {% block head %}
+ <title>Add Item</title>
+ {% endblock %}
+
+ {% block body %}
+ <div class="contet">
+    <h2>Add New Item</h2>
+    <form>
+        <label for="item_name">Item Name</label>
+        <input name="item_name" id="item_name" required>
+        <label for="item_count">Item Count</label>
+        <input name="item_count" id="item_count" required>
+        <label for="item_location">Item Location</label>
+        <input name="item_location" id="item_location" required>
+    </form>
+ </div>
+ {% endblock %}
