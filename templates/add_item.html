@@ -7,15 +7,17 @@
  {% block body %}
  <div class="contet">
     <h2>Add New Item</h2><br>
-    <form>
-        <label for="item_name">Item Name</label>
-        <input name="item_name" id="item_name" required><br>
-        <label for="item_count">Item Count</label>
-        <input name="item_count" id="item_count" required><br>
-        <label for="days_to_exp">Days until expiration</label>
-        <input name="days_to_exp" id="days_to_exp" required><br>
-        <label for="item_location">Item Location</label>
-        <input name="item_location" id="item_location" required><br>
+    <form method = "POST">
+        {{form.hidden_tag()}}<br>
+        {{form.item_name.label()}} 
+            {{form.item_name()}}<br>
+        {{form.item_count.label}} 
+            {{form.item_count()}}<br>
+        {{form.days_to_exp.label}}
+            {{form.days_to_exp()}}<br>
+        {{form.item_location.label}}
+             {{form.item_location()}}<br>
+        {{form.submit()}}
     </form>
  </div>
  {% endblock %}
