@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
  {% block head %}
- <title>Add Item</title>
+ <title>Edit Item</title>
  {% endblock %}
 
  {% block body %}
@@ -17,7 +17,7 @@
    
  {% endfor%}
  <div class="contet">
-    <h2>Add New Item</h2><br>
+    <h2>Edit Item</h2><br>
     <form method = "POST">
         {{form.hidden_tag()}}<br>
         {{form.item_name.label()}} 
