@@ -9,31 +9,35 @@
     <h2>Fridge App</h2><br>
    <!-- <button class="addbtn">Add Item</button> -->
     <a href="{{url_for('add_Item')}}" class="button">Add Item</a> 
+    {% if items | length < 1 %}
+    <h3>There are no items in the fridge</h3>
+    {% else %}
     <table>
         <tr>
             <th>Item</th>
             <th>Count</th>
             <th>Bought</th>
-            <th>Opened</th>
             <th>Expires in:</th>
             <th>Location</th>
             <th>Edit</th>
         </tr>
+        {% for item in items %}
         <tr>
-            <td>name</td>
-            <td>count</td>
-            <td>date</td>
-            <td>date</td>
-            <td>days</td>
-            <td>shelf</td>
+            <td>{{item.item_name}}</td>
+            <td>{{item.item_count}}</td>
+            <td>{{item.purchase_date.strftime("%m-%d")}}</td>
+            <td>{{item.days_to_exp}}</td>
+            <td>{{item.item_location}}</td>
             <td>
                 <a href="{{url_for('edit_Item')}}">
                     <button type="button">Edit</button>
                 </a>
                 <button class="deletebtn">Delete</button>
             </td>
-        </tr>    
+        </tr> 
+        {% endfor %}   
     </table>
+    {% endif %}
  </div>
  {% endblock %}
 
